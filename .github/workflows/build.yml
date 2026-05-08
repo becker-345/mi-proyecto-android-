@@ -1,0 +1,28 @@
+name: Compilacion Remota
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+          
+      - name: Permisos de ejecucion
+        run: chmod +x gradlew
+        
+      - name: Compilar APK
+        run: ./gradlew assembleDebug
+        
+      - name: Subir Resultado
+        uses: actions/upload-artifact@v4
+        with:
+          name: mi-apk-listo
+          path: app/build/outputs/apk/debug/*.apk
+		  
