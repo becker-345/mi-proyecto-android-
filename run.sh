@@ -15,24 +15,20 @@ echo -e "${AZUL}☁️ 2. Compilando en la nube (silencioso)...${NC}"
 sleep 3
 RUN_ID=$(gh run list -L 1 --json databaseId -q '.[0].databaseId')
 
-# Ocultamos el progreso para que no congele tu terminal
+# Ocultamos el progreso
 gh run watch $RUN_ID --exit-status > /dev/null 2>&1
 
 # Si falla (exit code != 0)
 if [ $? -ne 0 ]; then
-    echo -e "\n${ROJO}❌ ERROR DETECTADO. Descargando el registro del error...${NC}"
+    echo -e "\n${ROJO}❌ LA COMPILACIÓN FALLÓ.${NC}"
     
-    # Este es el comando mágico que baja SOLO el error, nada de basura
+    # Extrae el error y lo guarda (pero NO lo muestra en terminal)
     gh run view $RUN_ID --log-failed > error_log.txt
     
-    echo -e "${ROJO}------------------------------------------------${NC}"
-    cat error_log.txt
-    echo -e "${ROJO}------------------------------------------------${NC}"
-    
-    # Intenta copiar al portapapeles de AndroidIDE
+    # Intenta copiar al portapapeles
     cat error_log.txt | termux-clipboard-set 2>/dev/null
     
-    echo -e "${VERDE}✅ El error se imprimió arriba y está guardado en 'error_log.txt' en tu proyecto.${NC}"
+    echo -e "${VERDE}✅ El reporte detallado está en tu portapapeles y en 'error_log.txt'.${NC}"
     exit 1
 fi
 
