@@ -1,4 +1,4 @@
-name: Compilacion Remota
+name: Compilacion Ultra Rapida
 on: [push]
 
 jobs:
@@ -6,22 +6,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
-          cache: 'gradle'
-          
+
+      - name: Acelerador Gradle (Cache Extremo)
+        uses: gradle/actions/setup-gradle@v4
+        
       - name: Permisos de ejecucion
         run: chmod +x gradlew
         
-      - name: Compilar APK
-        run: ./gradlew assembleDebug
+      - name: Compilar a Maxima Potencia
+        # Usamos flags para paralelismo y cache
+        run: ./gradlew assembleDebug --parallel --build-cache --configuration-cache
         
       - name: Subir Resultado
         uses: actions/upload-artifact@v4
         with:
           name: mi-apk-listo
-          path: "app/build/outputs/apk/debug/*.apk"
+          path: app/build/outputs/apk/debug/*.apk
