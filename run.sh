@@ -15,7 +15,6 @@ echo -e "${AZUL}☁️ 2. Compilando en la nube...${NC}"
 sleep 3
 RUN_ID=$(gh run list -L 1 --json databaseId -q '.[0].databaseId')
 
-# Ejecutar y esperar resultados sin menús interactivos
 gh run watch $RUN_ID --exit-status
 
 if [ $? -ne 0 ]; then
@@ -24,22 +23,21 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo -e "${AZUL}📥 3. Descargando APK al teléfono...${NC}"
+echo -e "${AZUL}📥 3. Descargando APK...${NC}"
 rm -rf ./temp_apk
 gh run download $RUN_ID -n mi-apk-listo --dir ./temp_apk
 
-# --- AQUÍ ESTÁ EL CAMBIO DE LA CARPETA ---
-CARPETA_DESTINO="/storage/emulated/0/Download/outputs"
+# --- GUARDAMOS DENTRO DEL PROYECTO ACTUAL DE ANDROIDIDE ---
+CARPETA_DESTINO="$PWD/outputs"
 APK_FINAL="$CARPETA_DESTINO/MiApp.apk"
 
-# Creamos la carpeta outputs si no existe
 mkdir -p "$CARPETA_DESTINO"
-
-# Borramos la app anterior y movemos la nueva
 rm -f "$APK_FINAL"
 mv ./temp_apk/*.apk "$APK_FINAL"
+rm -rf ./temp_apk
 
-echo -e "${VERDE}📱 4. Abriendo instalador de Android...${NC}"
+echo -e "${VERDE}📱 4. Intentando abrir el instalador...${NC}"
+# Intentamos forzar la instalación
 termux-open "$APK_FINAL" 2>/dev/null || xdg-open "$APK_FINAL" 2>/dev/null || am start -a android.intent.action.VIEW -d "file://$APK_FINAL" -t "application/vnd.android.package-archive" 2>/dev/null
 
-echo -e "${VERDE}✅ ¡Listo! APK guardado en: Descargas/outputs/MiApp.apk${NC}"
+echo -e "${VERDE}✅ ¡Listo! APK guardado en la carpeta 'outputs' de tu proyecto.${NC}"
