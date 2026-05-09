@@ -1,72 +1,75 @@
-build	Compilar a Maxima Potencia	﻿2026-05-09T04:52:03.7769794Z ##[group]Run ./gradlew assembleDebug --parallel --build-cache --configuration-cache
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7770500Z [36;1m./gradlew assembleDebug --parallel --build-cache --configuration-cache[0m
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7791045Z shell: /usr/bin/bash -e {0}
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7791338Z env:
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7791571Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7792007Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7792535Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7792978Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7793518Z   GRADLE_USER_HOME: /home/runner/.gradle
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7793838Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7794158Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7794631Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7795166Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7795567Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
-build	Compilar a Maxima Potencia	2026-05-09T04:52:03.7815614Z ##[endgroup]
-build	Compilar a Maxima Potencia	2026-05-09T04:52:05.0529513Z Starting a Gradle Daemon (subsequent builds will be faster)
-build	Compilar a Maxima Potencia	2026-05-09T04:52:07.8520334Z Calculating task graph as no cached configuration is available for tasks: assembleDebug
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.0568039Z > Task :app:preBuild UP-TO-DATE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.0595916Z > Task :app:preDebugBuild UP-TO-DATE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.1560181Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.1579938Z > Task :app:checkKotlinGradlePluginConfigurationErrors
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.1611899Z > Task :app:generateDebugResValues FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.1636942Z > Task :app:javaPreCompileDebug FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.2526003Z > Task :app:generateDebugResources FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.2534003Z > Task :app:createDebugCompatibleScreenManifests
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.2535095Z > Task :app:packageDebugResources FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.5553215Z > Task :app:parseDebugLocalResources FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.6559462Z > Task :app:extractDeepLinksDebug FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.6560204Z > Task :app:mapDebugSourceSetPaths
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.7549426Z > Task :app:checkDebugAarMetadata
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.7573087Z > Task :app:processDebugMainManifest FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.7599446Z > Task :app:processDebugManifest FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.7639120Z > Task :app:processDebugManifestForPackage FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.8557735Z > Task :app:mergeDebugResources FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.8578613Z > Task :app:mergeDebugShaders
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.8613388Z > Task :app:compileDebugShaders NO-SOURCE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:17.8614211Z > Task :app:generateDebugAssets UP-TO-DATE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.0559280Z > Task :app:mergeDebugAssets
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.0570047Z > Task :app:compressDebugAssets FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.0613441Z > Task :app:mergeDebugJniLibFolders
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.1579303Z > Task :app:mergeDebugNativeLibs NO-SOURCE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.1608929Z > Task :app:checkDebugDuplicateClasses
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.1638755Z > Task :app:stripDebugDebugSymbols NO-SOURCE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.1669024Z > Task :app:mergeLibDexDebug FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.1698990Z > Task :app:writeDebugAppMetadata
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.1726213Z > Task :app:writeDebugSigningConfigVersions
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.7539295Z > Task :app:processDebugResources FAILED
-build	Compilar a Maxima Potencia	2026-05-09T04:52:18.8532185Z > Task :app:desugarDebugFileDependencies FROM-CACHE
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4518976Z > Task :app:validateSigningDebug
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4519559Z 
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4541394Z FAILURE: Build failed with an exception.
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4542492Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1778302329439.json
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4568616Z 
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4568862Z * What went wrong:
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4569428Z Execution failed for task ':app:processDebugResources'.
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4570711Z > A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4572345Z    > Android resource linking failed
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4573931Z      ERROR: /home/runner/work/mi-proyecto-android-/mi-proyecto-android-/app/src/main/AndroidManifest.xml:9:5-38:19: AAPT: error: resource mipmap/ic_launcher (aka com.harley.baseapk:mipmap/ic_launcher) not found.
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4575380Z          
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4576867Z      ERROR: /home/runner/work/mi-proyecto-android-/mi-proyecto-android-/app/src/main/AndroidManifest.xml:9:5-38:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.harley.baseapk:mipmap/ic_launcher_round) not found.
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4578970Z          
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4579181Z 
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4579325Z * Try:
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.4579766Z > Run with --stacktrace option to get the stack trace.
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.5561774Z > Run with --info or --debug option to get more log output.
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.5562617Z 25 actionable tasks: 12 executed, 13 from cache
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.5585686Z > Run with --scan to get full insights.
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.5586318Z Configuration cache entry stored.
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.5649478Z > Get more help at https://help.gradle.org.
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.5678736Z 
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.5718796Z BUILD FAILED in 15s
-build	Compilar a Maxima Potencia	2026-05-09T04:52:19.9471471Z ##[error]Process completed with exit code 1.
+build	Compilar a Maxima Potencia	﻿2026-05-09T04:56:30.6375748Z ##[group]Run ./gradlew assembleDebug --parallel --build-cache --configuration-cache
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6376443Z [36;1m./gradlew assembleDebug --parallel --build-cache --configuration-cache[0m
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6396360Z shell: /usr/bin/bash -e {0}
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6396635Z env:
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6396865Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6397297Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6397854Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6398317Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6398815Z   GRADLE_USER_HOME: /home/runner/.gradle
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6417551Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6417965Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6418445Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6418966Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6419351Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+build	Compilar a Maxima Potencia	2026-05-09T04:56:30.6419656Z ##[endgroup]
+build	Compilar a Maxima Potencia	2026-05-09T04:56:32.1407328Z Starting a Gradle Daemon (subsequent builds will be faster)
+build	Compilar a Maxima Potencia	2026-05-09T04:56:35.1414617Z Calculating task graph as no cached configuration is available for tasks: assembleDebug
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.4442069Z > Task :app:preBuild UP-TO-DATE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.4442998Z > Task :app:preDebugBuild UP-TO-DATE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.4443686Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.4444555Z > Task :app:checkKotlinGradlePluginConfigurationErrors
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.5413101Z > Task :app:generateDebugResValues FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.5431950Z > Task :app:javaPreCompileDebug FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.5451908Z > Task :app:createDebugCompatibleScreenManifests
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.5452986Z > Task :app:extractDeepLinksDebug FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.5453814Z > Task :app:generateDebugResources FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.7413323Z > Task :app:mapDebugSourceSetPaths
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.7442838Z > Task :app:packageDebugResources FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.8413403Z > Task :app:checkDebugAarMetadata
+build	Compilar a Maxima Potencia	2026-05-09T04:56:45.8423167Z > Task :app:mergeDebugResources FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.2412139Z > Task :app:parseDebugLocalResources FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.2413226Z > Task :app:processDebugMainManifest
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.3424055Z > Task :app:mergeDebugShaders
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.3448715Z > Task :app:compileDebugShaders NO-SOURCE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.3523250Z > Task :app:generateDebugAssets UP-TO-DATE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.4453939Z > Task :app:checkDebugDuplicateClasses
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.4543643Z > Task :app:mergeLibDexDebug FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.4603016Z > Task :app:mergeDebugAssets
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.4630816Z > Task :app:compressDebugAssets FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.4674838Z > Task :app:mergeDebugJniLibFolders
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.4722748Z > Task :app:mergeDebugNativeLibs NO-SOURCE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.4752749Z > Task :app:processDebugManifest
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.5473182Z > Task :app:stripDebugDebugSymbols NO-SOURCE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.5503508Z > Task :app:writeDebugAppMetadata
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.5562785Z > Task :app:processDebugManifestForPackage
+build	Compilar a Maxima Potencia	2026-05-09T04:56:46.5612902Z > Task :app:writeDebugSigningConfigVersions
+build	Compilar a Maxima Potencia	2026-05-09T04:56:47.2423282Z > Task :app:processDebugResources
+build	Compilar a Maxima Potencia	2026-05-09T04:56:47.5403246Z > Task :app:desugarDebugFileDependencies FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:48.3413164Z > Task :app:validateSigningDebug
+build	Compilar a Maxima Potencia	2026-05-09T04:56:48.5448181Z > Task :app:mergeExtDexDebug FROM-CACHE
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.2405118Z 
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.2424422Z e: file:///home/runner/work/mi-proyecto-android-/mi-proyecto-android-/app/src/main/java/com/harley/baseapk/InstallScreen.kt:7:47 Unresolved reference: UploadFile
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.2425821Z > Task :app:compileDebugKotlin
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.2427313Z e: file:///home/runner/work/mi-proyecto-android-/mi-proyecto-android-/app/src/main/java/com/harley/baseapk/InstallScreen.kt:29:41 Unresolved reference: UploadFile
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3419314Z 
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3422701Z 
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3423225Z > Task :app:compileDebugKotlin FAILED
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3462329Z FAILURE: Build failed with an exception.
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3463653Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1778302597790.json
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3464727Z 
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3482761Z * What went wrong:
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3483278Z 27 actionable tasks: 16 executed, 11 from cache
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3510128Z Execution failed for task ':app:compileDebugKotlin'.
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3512405Z > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3513840Z Configuration cache entry stored.
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3514590Z    > Compilation error. See log for more details
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3515104Z 
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3515381Z * Try:
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3516111Z > Run with --stacktrace option to get the stack trace.
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3517053Z > Run with --info or --debug option to get more log output.
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3517879Z > Run with --scan to get full insights.
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3518624Z > Get more help at https://help.gradle.org.
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3519408Z 
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.3534767Z BUILD FAILED in 21s
+build	Compilar a Maxima Potencia	2026-05-09T04:56:52.7959812Z ##[error]Process completed with exit code 1.
