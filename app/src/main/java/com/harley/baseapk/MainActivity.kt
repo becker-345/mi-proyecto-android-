@@ -10,9 +10,13 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        
+        // Atrapamos la ruta del APK externo si alguien abrió nuestra app tocando un archivo
+        val externalApkUri = intent.data 
+        
         setContent {
             BaseapkTheme {
-                InstallScreen()
+                InstallScreen(externalApkUri)
             }
         }
     }
