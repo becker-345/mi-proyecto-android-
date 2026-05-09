@@ -1,5 +1,6 @@
 package com.harley.baseapk
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,12 +12,20 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         
-        // Atrapamos la ruta del APK externo si alguien abrió nuestra app tocando un archivo
-        val externalApkUri = intent.data 
+        val externalUri = intent.data 
         
+        // 1. MODO SILENCIOSO: Si tocaste un APK desde afuera (ZArchiver)
+        if (externalUri != null && intent.action == Intent.ACTION_VIEW) {
+            InstallLogic.installExternalApk(this, externalUri)
+            // Cerramos nuestra app al instante. Solo quedará el instalador del sistema.
+            finish()
+            return
+        }
+        
+        // 2. MODO DASHBOARD: Si abriste la app tocando el ícono en el Inicio
         setContent {
             BaseapkTheme {
-                InstallScreen(externalApkUri)
+                InstallScreen()
             }
         }
     }
